@@ -26,8 +26,15 @@
     <![endif]-->
     <style type="text/css">
       .reveal pre {
+        font-size: 0.6em;
+      }
+
+      .reveal pre.medium {
+        font-size: 0.7em;
+      }
+
+      .reveal pre.big {
         font-size: 0.8em;
-        border-radius: 1em;
       }
     </style>
   </head>
@@ -304,7 +311,7 @@
         <section>
           <h2>Doctype</h2>
           <p>Document type declaration</p>
-          <pre><code>
+          <pre class="big"><code>
   &lt;!DOCTYPE html&gt;
           </code></pre>
 
@@ -316,7 +323,7 @@
 
         <section>
           <h2>HTML tag</h2>
-          <pre><code>
+          <pre class="big"><code>
   &lt;html&gt;
   &lt;/html&gt;
           </code></pre>
@@ -329,7 +336,7 @@
         <section>
           <h2>HEAD &amp; title</h2>
           <p>The <strong>head</strong> contains metadata for the document</p>
-          <pre><code>
+          <pre class="big"><code>
   &lt;head&gt;
     &lt;title&gt;Hello HTML&lt;/title&gt;
   &lt;/head&gt;
@@ -340,7 +347,7 @@
         <section>
           <h2>Body</h2>
           <p>The main content of the document</p>
-          <pre><code>
+          <pre class="big"><code>
   &lt;body&gt;
   &lt;/body&gt;
           </code></pre>
@@ -348,43 +355,43 @@
 
         <section>
           <h2>anatomy of the HTML Tag</h2>
-          <pre><code>
-  &lt;element artibute="value"&gt;content&lt;/element&gt;
+          <pre class="medium"><code>
+  &lt;element attribute="value"&gt;content&lt;/element&gt;
           </code></pre>
         </section>
 
         <section>
           <h2>Start/open tag</h2>
-          <pre><code>
-  <strong>&lt;element</strong> artibute="value"<strong>&gt;</strong>content&lt;/element&gt;
+          <pre class="medium"><code>
+  <strong>&lt;element</strong> attribute="value"<strong>&gt;</strong>content&lt;/element&gt;
           </code></pre>
         </section>
 
         <section>
           <h2>End/close Tag</h2>
-          <pre><code>
-  &lt;element artibute="value"&gt;content<strong>&lt;/element&gt;</strong>
+          <pre class="medium"><code>
+  &lt;element attribute="value"&gt;content<strong>&lt;/element&gt;</strong>
           </code></pre>
         </section>
 
         <section>
           <h2>Attributes</h2>
-          <pre><code>
-  &lt;element <strong>artibute="value"</strong>&gt;content&lt;/element&gt;
+          <pre class="medium"><code>
+  &lt;element <strong>attribute="value"</strong>&gt;content&lt;/element&gt;
           </code></pre>
         </section>
 
         <section>
           <h2>Content</h2>
-          <pre><code>
-  &lt;element artibute="value"&gt;<strong>content</strong>&lt;/element&gt;
+          <pre class="medium"><code>
+  &lt;element attribute="value"&gt;<strong>content</strong>&lt;/element&gt;
           </code></pre>
         </section>
 
         <section>
           <h2>element</h2>
-          <pre><code>
-  <strong>&lt;element artibute="value"&gt;content&lt;/element&gt;</strong>
+          <pre class="medium"><code>
+  <strong>&lt;element attribute="value"&gt;content&lt;/element&gt;</strong>
           </code></pre>
         </section>
 
@@ -479,13 +486,13 @@
         <section>
           <h2>div</h2>
           <p>Generic container for content</p>
-          <pre><code>
-&lt;div&gt;
-  header content goes here
-&lt;/div&gt;
-&lt;div&gt;
-  main content goes here
-&lt;/div&gt;
+          <pre class="medium"><code>
+  &lt;div&gt;
+    header content goes here
+  &lt;/div&gt;
+  &lt;div&gt;
+    main content goes here
+  &lt;/div&gt;
           </code></pre>
           <ul>
             <li>Block element</li>
@@ -496,10 +503,10 @@
         <section>
           <h2>span</h2>
           <p>Generic container for content</p>
-          <pre><code>
-&lt;p&gt;
-  See Spot &lt;span&gt;run&lt;/span&gt;!
-&lt;/p&gt;
+          <pre class="medium"><code>
+  &lt;p&gt;
+    See Spot &lt;span&gt;run&lt;/span&gt;!
+  &lt;/p&gt;
           </code></pre>
           <ul>
             <li>Inline element</li>
@@ -509,20 +516,21 @@
 
         <section>
           <h2>block</h2>
-          <pre><code>
-&lt;div&gt;This&lt;/div&gt;, &lt;div&gt;that&lt;/div&gt;, and the &lt;div&gt;other&lt;/div&gt;
+          <pre style="width: 100%;"><code>
+  &lt;div>This, &lt;/div>&lt;div>that, &lt;/div>&lt;div>and the other&lt;/div>
           </code></pre>
 
-          <div>This</div>, <div>that</div>, and the <div>other</div>
+          <div>This, </div><div>that, </div><div>and the other</div>
         </section>
 
         <section>
           <h2>inline</h2>
           <pre><code>
-&lt;span&gt;This&lt;/span&gt;, &lt;span&gt;that&lt;/span&gt;, and the &lt;span&gt;other&lt;/span&gt;
+  &lt;span>This, &lt;/span>&lt;span>that, &lt;/span>
+  &lt;span>and the other&lt;/span>
           </code></pre>
           <p>
-            <span>This</span>, <span>that</span>, and the <span>other</span>
+            <span>This, </span><span>that, </span><span>and the other</span>
           </p>
         </section>
 
@@ -543,13 +551,16 @@
           <h2>Headings</h2>
           <!-- TODO: side by side -->
           <pre><code>
-&lt;h1&gt;one&lt;/h1&gt;
-&lt;h2&gt;two&lt;/h2&gt;
-&lt;h2&gt;three&lt;/h2&gt;
-&lt;h4&gt;four&lt;/h4&gt;
-&lt;h5&gt;five&lt;/h5&gt;
-&lt;h6&gt;six&lt;/h6&gt;
+  &lt;h1&gt;one&lt;/h1&gt;
+  &lt;h2&gt;two&lt;/h2&gt;
+  &lt;h2&gt;three&lt;/h2&gt;
+  &lt;h4&gt;four&lt;/h4&gt;
+  &lt;h5&gt;five&lt;/h5&gt;
+  &lt;h6&gt;six&lt;/h6&gt;
           </pre></code>
+        </section>
+        <section>
+          <h2>Headings</h2>
           <h1>one</h1>
           <h2>two</h2>
           <h2>three</h2>
@@ -561,9 +572,9 @@
         <section>
           <h2>anchors/links</h2>
           <pre><code>
-&lt;a href=&quot;http://girldevelopit.com&quot;&gt;
-  Girl Develop It
-&lt;/a&gt;
+  &lt;a href=&quot;http://girldevelopit.com&quot;&gt;
+    Girl Develop It
+  &lt;/a&gt;
           </code></pre>
           <p>
             <a href="http://girldevelopit.com">Girl Develop It</a>
@@ -573,15 +584,15 @@
         <section>
           <h2>Images</h2>
           <pre><code>
-&lt;img src=&quot;kitten.jpg&quot; alt=&quot;kitten&quot;&gt;
+  &lt;img src=&quot;kitten.jpg&quot; alt=&quot;kitten&quot;&gt;
           </code></pre>
-          <!-- TODO: Add kitten and domo-kun -->
+          <img src="images/kitten.jpg" alt="kitten">
         </section>
 
         <section>
           <h2>Images</h2>
           <pre><code>
-&lt;img src=&quot;kitten.jpg&quot; alt=&quot;kitten&quot;&gt;
+  &lt;img src=&quot;kitten.jpg&quot; alt=&quot;kitten&quot;&gt;
           </code></pre>
           <p>
             kitten
@@ -591,26 +602,25 @@
         <section>
           <h2>image links</h2>
           <pre><code>
-&lt;a href=&quot;http://girldevelopit.com&quot;&gt;
-  &lt;img src=&quot;gdi-logo.png&quot; alt=&quot;Girl Develop It&quot;&gt;
-&lt;/a&gt;
+  &lt;a href=&quot;http://girldevelopit.com&quot;&gt;
+    &lt;img src=&quot;gdi-logo.png&quot; alt=&quot;Girl Develop It&quot;&gt;
+  &lt;/a&gt;
           </code></pre>
           <!-- TODO: add example with logo -->
+          <a href="http://girldevelopit.com">
+            <img src="images/gdi-logo.png">
+          </a>
         </section>
 
         <section>
           <h2>Lists</h2>
+          <p>Unordered lists</p>
           <pre><code>
-&lt;ul&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ol&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+  &lt;/ul&gt;
           </code></pre>
           <!-- TODO: fix formatting of both lists - make side by side -->
           <ul>
@@ -618,6 +628,19 @@
             <li>Item 2</li>
             <li>Item 3</li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Lists</h2>
+          <p>Ordered lists</p>
+          <pre><code>
+  &lt;ol&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+  &lt;/ol&gt;
+          </code></pre>
+          <!-- TODO: fix formatting of both lists - make side by side -->
           <ol>
             <li>Item 1</li>
             <li>Item 2</li>
@@ -626,15 +649,17 @@
         </section>
 
         <section data-state="activity">
-          <h2>Activity: ul for navigation</h2>
-          <ol>
-            <li>Go to <a href="http://www.girldevelopit.com">http://www.girldevelopit.com</a></li>
-            <li>Inspect the navigation using the Chrome Developer Tools</li>
-          </ol>
-        </section>
+          <section>
+            <h2>Activity: ul for navigation</h2>
+            <ol>
+              <li>Go to <a href="http://www.girldevelopit.com">http://www.girldevelopit.com</a></li>
+              <li>Inspect the navigation using the Chrome Developer Tools</li>
+            </ol>
+          </section>
 
-        <section>
-          <!-- TODO: Add screenshot of inspecting GDI nav -->
+          <section>
+            <img src="images/gdi-nav-list.png">
+          </section>
         </section>
 
         <section>
