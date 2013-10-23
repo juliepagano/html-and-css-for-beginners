@@ -46,15 +46,15 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h2>Class materials</h2>
+          <h3>Class materials</h3>
           <p><a href="http://gdipgh.github.io/html-and-css-for-beginners">http://gdipgh.github.io/html-and-css-for-beginners</a></p>
         </section>
 
         <!-- Opening slide -->
         <section>
           <img src ="images/gdi_logo_badge.png" style="width:50%">
-          <h2>Beginning HTML and CSS</h2>
-          <h3>Class 1</h3>
+          <h3>Beginning HTML and CSS</h3>
+          <h4>Class 1</h4>
         </section>
 
         <!-- Welcome-->
@@ -139,7 +139,7 @@
         </section>
 
         <section>
-          <h2>World wide web consortium</h2>
+          <h3>World wide web consortium</h3>
           <img src="images/w3c-logo.png">
           <ul>
             <li>Main international standards organization for the web</li>
@@ -300,7 +300,7 @@
         </section>
 
         <section>
-          <h2>Project requirements</h2>
+          <h3>Project requirements</h3>
           <ul>
             <li>Who is your audience?</li>
             <li>Things to include:
@@ -318,7 +318,7 @@
 
         <section data-state="activity">
           <section>
-            <h2>Activity: Sketch your site layout</h2>
+            <h3>Activity: Sketch your site layout</h3>
             <ol>
               <li>Sketch your site layout</li>
               <li>Make some notes</li>
@@ -376,10 +376,11 @@
           <p>The <strong>head</strong> contains metadata for the document</p>
           <pre class="big"><code>
   &lt;head&gt;
-    &lt;title&gt;Hello HTML&lt;/title&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
   &lt;/head&gt;
           </code></pre>
           <p>The <strong>title</strong> defines the title of the document</p>
+          <img src="images/hello-world-title.png" class="fragment">
         </section>
 
         <section>
@@ -387,8 +388,10 @@
           <p>The main content of the document</p>
           <pre class="big"><code>
   &lt;body&gt;
+    Hello World!
   &lt;/body&gt;
           </code></pre>
+          <img src="images/hello-world-body.png" class="fragment">
         </section>
 
         <section>
@@ -403,6 +406,7 @@
           <pre class="medium"><code>
   <strong>&lt;element</strong> attribute="value"<strong>&gt;</strong>content&lt;/element&gt;
           </code></pre>
+          <img src="images/tag-open.png">
         </section>
 
         <section>
@@ -410,6 +414,7 @@
           <pre class="medium"><code>
   &lt;element attribute="value"&gt;content<strong>&lt;/element&gt;</strong>
           </code></pre>
+          <img src="images/tag-close.png">
         </section>
 
         <section>
@@ -434,6 +439,38 @@
         </section>
 
         <section>
+         <h3>Anatomy of an HTML element</h3>
+         <ul>
+           <li class = "fragment">
+             <strong class="blue">Container Element</strong>
+             <ul>
+               <li>An element that can contain other elements or
+               content</li>
+               <li>A paragraph (&lt;p>) contains text</li>
+              </ul>
+          </li>
+          <li class = "fragment">
+            <strong class="blue">Stand Alone Element</strong>
+            <ul>
+              <li>An element that cannot contain anything else</li>
+              <li>
+<pre><code class = "html">&lt;br/>
+&lt;img/>
+</code></pre>
+              </li>
+            </ul>
+        </section>
+
+        <section>
+          <h2>HTML references</h2>
+          <p>These will be useful throughout the class.</p>
+          <ul>
+            <li><a href="http://developer.mozilla.org">Mozilla Developer Network (MDN)</a></li>
+            <li><a href="http://www.htmldog.com">HTML Dog</a></li>
+          </ul>
+        </section>
+
+        <section>
           <!-- TODO: Update the next to sections to be side by side, non-centered p tags -->
           <h2>paragraphs</h2>
           <pre><code>
@@ -446,38 +483,6 @@
           </code></pre>
           <p>This is the first paragraph!</p>
           <p>This is the second paragraph!</p>
-        </section>
-
-        <section>
-          <h2>Line breaks</h2>
-          <pre><code>
-  &lt;p&gt;
-    The White House<strong>&lt;br&gt;</strong>
-    1600 Pennsylvania Ave.<strong>&lt;br&gt;</strong>
-    Washington, DC 20500
-  &lt;/p&gt;
-          </code></pre>
-          <p>
-            The White House<br>
-            1600 Pennsylvania Ave.<br>
-            Washington, DC 20500
-          </p>
-        </section>
-
-        <section>
-          <h2>Line breaks</h2>
-          <pre><code>
-  &lt;p&gt;
-    old pond...<strong>&lt;br&gt;</strong>
-    a frog leaps in<strong>&lt;br&gt;</strong>
-    water’s sound
-  &lt;/p&gt;
-          </code></pre>
-          <p>
-            old pond...<br>
-            a frog leaps in<br>
-            water's sound
-          </p>
         </section>
 
         <section data-state="activity">
@@ -542,9 +547,7 @@
           <h2>span</h2>
           <p>Generic container for content</p>
           <pre class="medium"><code>
-  &lt;p&gt;
-    See Spot &lt;span&gt;run&lt;/span&gt;!
-  &lt;/p&gt;
+  See Spot &lt;span&gt;run&lt;/span&gt;!
           </code></pre>
           <ul>
             <li>Inline element</li>
@@ -553,7 +556,9 @@
         </section>
 
         <section>
-          <h2>block</h2>
+          <h2>block elements</h2>
+          <p>A standalone block of content.</p>
+          <p>Usually have line breaks before and after.</p>
           <pre style="width: 100%;"><code>
   &lt;div>This, &lt;/div>&lt;div>that, &lt;/div>&lt;div>and the other&lt;/div>
           </code></pre>
@@ -562,7 +567,8 @@
         </section>
 
         <section>
-          <h2>inline</h2>
+          <h2>inline elements</h2>
+          <p>Flow along with content.</p>
           <pre><code>
   &lt;span>This, &lt;/span>&lt;span>that, &lt;/span>
   &lt;span>and the other&lt;/span>
@@ -575,9 +581,9 @@
         <section>
           <h2>EM &amp; Strong</h2>
           <p>Inline elements for marking text</p>
-          <pre><code>
-&lt;p&gt;em is used to &lt;em&gt;stress emphasis&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;strong is used to give &lt;strong&gt;strong importance&lt;/strong&gt;.&lt;/p&gt;
+          <pre style="width: 100%;"><code>
+  &lt;p&gt;em is used to &lt;em&gt;stress emphasis&lt;/em&gt;.&lt;/p&gt;
+  &lt;p&gt;strong is used for &lt;strong&gt;strong importance&lt;/strong&gt;.&lt;/p&gt;
           </code></pre>
           <ul>
             <li>em is used to <em>stress emphasis</em></li>
@@ -586,7 +592,39 @@
         </section>
 
         <section>
-          <h2>Headings</h2>
+          <h2>Line breaks</h2>
+          <pre><code>
+  &lt;p&gt;
+    The White House<strong>&lt;br&gt;</strong>
+    1600 Pennsylvania Ave.<strong>&lt;br&gt;</strong>
+    Washington, DC 20500
+  &lt;/p&gt;
+          </code></pre>
+          <p>
+            The White House<br>
+            1600 Pennsylvania Ave.<br>
+            Washington, DC 20500
+          </p>
+        </section>
+
+        <section>
+          <h2>Line breaks</h2>
+          <pre><code>
+  &lt;p&gt;
+    old pond...<strong>&lt;br&gt;</strong>
+    a frog leaps in<strong>&lt;br&gt;</strong>
+    water’s sound
+  &lt;/p&gt;
+          </code></pre>
+          <p>
+            old pond...<br>
+            a frog leaps in<br>
+            water's sound
+          </p>
+        </section>
+
+        <section>
+          <h3>Headings</h3>
           <!-- TODO: side by side -->
           <div class="left" style="width: 50%;">
             <pre><code>
@@ -632,6 +670,7 @@
 
         <section>
           <h2>Images</h2>
+          <p>Alt text is displayed when an image is not available.</p>
           <pre><code>
   &lt;img src=&quot;kitten.jpg&quot; alt=&quot;kitten&quot;&gt;
           </code></pre>
@@ -748,14 +787,6 @@
         </section>
 
         <section>
-          <h2>HTML references</h2>
-          <ul>
-            <li><a href="http://developer.mozilla.org">Mozilla Developer Network</a></li>
-            <li><a href="http://www.htmldog.com">HTML Dog</a></li>
-          </ul>
-        </section>
-
-        <section>
           <h2><a href="http://www.lipsum.com/">Lorem Ipsum</a></h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque felis at dolor sollicitudin pellentesque. Donec adipiscing posuere pharetra.</p>
           <!-- TODO: Add screenshot of lipsum -->
@@ -774,7 +805,7 @@
             <li>Reference your sketch</li>
             <li>Use the filler text of your choice to mock content</li>
             <li>Add real content when you are ready</li>
-            <li>Use HTML references (Mozilla Developer Network)</li>
+            <li>Use HTML references (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN</a>)</li>
           </ol>
         </section>
 
